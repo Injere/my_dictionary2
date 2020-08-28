@@ -41,6 +41,25 @@ public class Console {
 		
 	}
 	
+	
+	public  void Ent() {
+		
+		System.out.print("\nEnter number operation: ");
+	
+      		
+	}
+	
+	public void Err(){
+		
+		System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
+		
+	}
+	
+	
+	
+	
+	
+	
 	public String One() {
 		
 		System.out.print("Enter value: ");

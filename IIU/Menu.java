@@ -5,79 +5,92 @@ public class Menu {
 	Console cons = new Console();
 	Scanner sc = new Scanner(System.in);
 	En d = new En();
+	Dict s = new Dict();
+	Dop dop = new Dop();
+	
+	
+	
+
+	 
+	
 	
 	public String start() {
-		
-		int choice=-1;
-		String nameDict;
 		
 		
 		cons.constart(); 
 		
+		String nameDict;
 		
-		//try {
-		choice=sc.nextInt();
-		System.out.println(choice);
-		
-	//	} catch (IOException e) {
-      //      System.out.println(e);
-   //     }
-		
+			switch(dop.getInt())
+			{
 				
-		
-		switch(choice)
-		{
+			
 			case 0:
 				System.exit(0);
 			case 1:
+			
 				return nameDict = "Dict1.txt";
-				
-				
-				
+				 
+			
 			case 2:
 				return nameDict = "Dict2.txt";
 				
 				
 			default:
 			{
-				System.out.println(choice);
-				nameDict = "not in menu";
+				cons.Err();
 				
-				try{
-					new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
-				}catch (Exception e)
-				{
-					System.out.println(e);
-				}
 			
-				start();
-				break;
+				nameDict =start();
+				return nameDict;
+				
+				
 			}
 				
 		}
 		
 		
-		return nameDict;
+		
+		
+		
 		
 		
 			
 	}
 	
+	
+	
+	public void Kre(String nameDict){
+		
+		String keyEn =cons.key();
+		
+		if(s.isDefWord(nameDict, keyEn))
+					d.Work(nameDict, keyEn ,cons.One());
+				else
+				{
+					System.out.println("Again" );
+					Kre(nameDict);
+					
+					
+				}
+		
+	}
+	
+	
+	
+	
+	
+	
 	public  void startCont(String nameDict){
 		
 		
-		cons.conStartTwo(nameDict);
+		
 		int num;
 		
-		do {
-			num = sc.nextInt();
-			
-		}
 		
-		while (num>4 || num<0);
+		num = dop.getInt();
 		
 		
-		System.out.println(num);
 		
 		switch(num)
 		
@@ -90,26 +103,22 @@ public class Menu {
 				
 			case 1:
 			boolean value;
-				Dict s = new Dict();
-				String keyEn =cons.key();
 				
-				if(s.isDefWord(nameDict, keyEn))
-					d.Work(nameDict, keyEn ,cons.One());
-				else
-					System.out.println("Again" );
-					keyEn =cons.key();
-					startCont(nameDict);
-					
 				
+				
+				Kre(nameDict);
+				
+							
 								
 				break;
 				
 			case 2:
+				d.reader(nameDict);
 				break;
 				
 			case 3:
-				cons.key();
-				d.delWord(cons.key());
+				
+				d.delWord(cons.key(), nameDict);
 			
 				break;
 				
@@ -122,17 +131,22 @@ public class Menu {
 				
 			default: 
 				
+				
+				
 				try{
 					new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
 				}catch (Exception e)
 				{
 					System.out.println(e);
-					start();
+					
 				}
-			
+				
+				
+				cons.Err();
 				
 		
-		
+			
+				
 		
 	}
 	

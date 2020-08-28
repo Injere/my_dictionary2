@@ -22,6 +22,7 @@ public class Dict {
 					}
 					
 					else 
+						
 						return false;
 				}
 					
@@ -39,7 +40,14 @@ public class Dict {
 							return false;
 						
 				}
-					
+
+				default: {
+
+					return false;
+				
+				
+
+				}
 					
 			
 			

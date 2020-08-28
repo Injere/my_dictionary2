@@ -5,10 +5,12 @@ public class Main {
 	public static void main(String[] args) {
 		
 		
-		String nameDict=null;
-		
+		String nameDict;
 		Menu menu = new Menu();
+		
 		nameDict = menu.start();
+		Console cons = new Console();
+		cons.conStartTwo(nameDict);
 		menu.startCont(nameDict);
 		
 		

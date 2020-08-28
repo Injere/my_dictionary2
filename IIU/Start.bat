@@ -1,5 +1,14 @@
 echo off
 javac -version
-javac Main.java
-java Main
+rd /s /q classes
+mkdir classes
+javac -d ./classes Main.java
+cd classes
+java -cp . Main
+
 pause
+
+
+
+
+
