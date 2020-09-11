@@ -51,10 +51,6 @@ public class Menu {
 		
 		
 		
-		
-		
-		
-		
 			
 	}
 	
@@ -86,11 +82,9 @@ public class Menu {
 		
 		
 		int num;
-		
+		cons.conStartTwo(nameDict);
 		
 		num = dop.getInt();
-		
-		
 		
 		switch(num)
 		
@@ -99,15 +93,10 @@ public class Menu {
 				start();
 				
 				break;
-				
-				
+							
 			case 1:
-			boolean value;
-				
-				
-				
+		
 				Kre(nameDict);
-				
 							
 								
 				break;
@@ -124,7 +113,8 @@ public class Menu {
 				
 			case 4:
 			
-				cons.key();
+				
+				d.find(cons.key(), nameDict);
 				
 				
 				break;
@@ -144,12 +134,10 @@ public class Menu {
 				
 				cons.Err();
 				
-		
 			
-				
 		
 	}
-	
+		startCont(nameDict);
 	
 	
 			

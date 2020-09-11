@@ -18,7 +18,7 @@ public class Console {
 	public  void conStartTwo(String name) {
 		
 		System.out.print("active: " + name);
-		System.out.print("\nEnter number operation: ");
+		
 			
 			
             System.out.print("\nEnter number operation: ");
@@ -38,7 +38,6 @@ public class Console {
 		
 		return wordEng;
 		
-		
 	}
 	
 	
@@ -51,7 +50,7 @@ public class Console {
 	
 	public void Err(){
 		
-		System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
+		System.out.println("You made a mistake. Try again");
 		
 	}
 	

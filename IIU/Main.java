@@ -8,14 +8,21 @@ public class Main {
 		String nameDict;
 		Menu menu = new Menu();
 		
+		
 		nameDict = menu.start();
 		Console cons = new Console();
-		cons.conStartTwo(nameDict);
+		
+		
 		menu.startCont(nameDict);
+		
+		
+		
 		
 		
 				
 	}
+	
+
 			
 	
 }
